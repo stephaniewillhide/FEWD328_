@@ -1,0 +1,28 @@
+.class-1{
+  font-family: arial;
+  color: pink;
+}
+
+.hipster-class{
+  font-family: georgia;
+  color: #41bbf4;
+  background: black;
+  letter-spacing: 2px;
+  padding: 20px;
+}
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1448131063153-f1e240f98a72?dpr=2&auto=format&fit=crop&w=767&h=530&q=80&cs=tinysrgb&crop=f");
+  padding: 70px;
+}
+
+p {
+  font-family: georgia;
+  color: white;
+  padding: 7px;
+}
+
+header {
+  font-family: arial;
+  color:pink;
+}
