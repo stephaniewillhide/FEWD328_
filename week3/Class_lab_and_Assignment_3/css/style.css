@@ -1,7 +1,7 @@
 /*
-Project Name: Blank Template
-Client: Your Client
-Author: Your Name
+Project Name: Relaxr Blog
+Client: Relaxr
+Author: SW
 Developer @GA in NYC
 */
 
@@ -11,20 +11,22 @@ Developer @GA in NYC
 /*******************************************/
 
 /* Box Model Hack */
+
 * {
-     -moz-box-sizing: border-box; /* Firexfox */
-     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
-     box-sizing: border-box; /* IE */
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
 }
 
 /* Clear fix hack */
+
 .clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .clear {
@@ -46,35 +48,278 @@ Developer @GA in NYC
 /*******************************************/
 
 body {
-     color: #000;
-     font-size: 12px;
-     line-height: 1.4;
-     font-family: Helvetica, Arial, sans-serif;
+  color: #f0efef;
+  font-size: 26px;
+  line-height: 1.4;
+  background: url(../images/header_bg.jpg) no-repeat center top rgb(134,141,157);
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
 }
-
 
 /******************************************
 /* LAYOUT
 /*******************************************/
 
 /* Center the container */
-#container {
-  width: 960px;
-  margin: auto;
+.container {
+  width: 100%;
+  margin: 0 auto;
+  height: 500px;
 }
 
-header {
+section {
+  background: #f0efef;
+}
 
+.container header {
+  padding: 50px;
+}
+
+header h1 {
+  font-size: 35px;
+  font-weight: 900;
+  display: inline-block;
+}
+
+header h2 {
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  padding: 100px;
+}
+
+section p {
+  font-weight: 200;
+  font-size: 13px;
+  padding: 30px 0px 30px 0px;
+}
+
+header button {
+  background-color: #f9e42e;
+  margin: 0;
+  float: center;
+}
+
+article h3 {
+  font-size: 40px;
+  font-weight: 600;
 }
 
 footer {
-
+  background: #121212;
+  color: white;
+  text-align: center;
+  float: bottom;
+  position: absolute;
 }
 
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+footer h3 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 900;
+}
 
+ul li h3 {
+  display: inline;
+  text-align: center;
+}
 
+aside {
+  background: #f9e42e;
+  padding: 20px;
+}
 
+/* For Amanda's Testimonial */
 
+.user {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  font-style: normal;
+}
+
+.testimonial {
+  font-weight: light;
+  font-style: italic;
+  background: none;
+  padding: 30px 150px 30px 150px;
+  font-size: 18px;
+}
+
+/* Styles the benefits section */
+
+.benefits {
+  color: #121212;
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 70px;
+  padding-top: 70px;
+  padding-left: 80px;
+  padding-right: 170px;
+}
+
+.benefits h2{
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.benefits > ul > li {
+  list-style-type: disc;
+  position:relative;left:50px;
+  font-weight: 200;
+  font-size: 13px;
+  padding-right: 200px;
+}
+
+/* Styles our 2 calls to action */
+
+.button {
+  border-radius: 5px;
+  font-weight: 800;
+  padding: 12px 0;
+  width: 180px;
+  font-size: 28px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.yellow {
+  background: #f9e42e;
+  color: #033048;
+}
+
+.blue {
+  background: #033048;
+  color: #fff;
+  font-size: 24px;
+}
+
+/* Styling the footer */
+
+footer > h3 {
+  color: #f9e42e;
+  padding: 20px;
+}
+
+footer > ul > li {
+  display: inline;
+  padding: 20px;
+}
+
+footer > ul {
+  padding: 20px;
+}
+
+.copyright {
+  font-size: 9px;
+  padding: 20px;
+}
+
+/* Styling the articles */
+
+main {
+  display: flex;
+  width: 940px;
+}
+
+section {
+  color: black;
+}
+
+.blog {
+  width: 700px;
+  padding: 60px;
+}
+
+/* styles our sidebar */
+
+.sidebar {
+  width: 240px;
+  padding: 30px;
+}
+
+.sidebar h3 {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 20px 0px 20px 0px;
+}
+
+footer {
+  width: 940px;
+}
+
+.sidebar ul {
+  font-size: 20px;
+}
+
+.sidebar p {
+  padding-top: 0px;
+}
+
+/* Styles our ad space */
+
+.ad {
+  background-color: white;
+  width: 180px;
+  height: 300px;
+  text-align: center;
+}
+
+/*styles our header */
+
+#container > header {
+  width: 940px;
+  display: inline-block;
+}
+
+nav {
+  font-weight: 300;
+  font-size: 24px;
+  color: #f9e42e;
+  display: inline-block;
+  float: right;
+}
+
+nav > ul > li {
+  display: inline-block;
+  padding: 0px 10px 0px 10px;
+}
+
+nav > ul {
+  margin-top: 10px;
+}
+
+.blognav {
+  background-color: #033048;
+  padding: 20px 60px 20px 60px;
+}
+
+/* Creates our Drop Letter */
+
+#container > main > section.blog > article > p::first-letter {
+  font-size: 72px;
+  float: left;
+  font-weight: 800;
+  margin: -20px 3px -7px 3px;
+}
+
+.blogimg img {
+  width: 610px;
+}
+
+span {
+  float: right;
+  display: block;
+  font-weight: 800;
+}
+
+span::after {
+  content: " >"
+}
+
+hr {
+  margin-top: 50px;
+}
