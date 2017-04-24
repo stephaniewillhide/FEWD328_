@@ -1,0 +1,34 @@
+body {
+  font-family: 'Lobster', cursive;  
+  animation-name: slow-fade;
+  animation-duration: 300s;
+  animation-iteration-count: infinite;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 70px;
+}
+
+p {
+  font-size: 30px;
+}
+
+@keyframes slow-fade {
+   0%   {background-color: #cdccce;}
+   25%  {background-color: #c19bf7;}
+   40%  {background-color: #4286f4;}
+   75%  {background-color: turquoise;}
+   100% {background-color: #cdccce;}
+}
+
+button {
+  padding: 10px;
+  font-size: 30px;
+  font-family: 'Lobster', cursive; 
+  border: none;
+  color: white;
+  background-color: black;
+  margin: 10px;
+}
