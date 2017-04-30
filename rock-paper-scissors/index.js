@@ -49,6 +49,8 @@ function play(humanPlay) {
   }  
 }
 
+/*randomizes computer's play*/
+
 function getComputerPlay() {
   var plays = ['rock', 'paper', 'scissors'];
   var play = plays[Math.floor(Math.random() * plays.length)];
