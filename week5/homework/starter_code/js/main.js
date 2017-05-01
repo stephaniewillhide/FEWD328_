@@ -1,8 +1,10 @@
+// override default a settings
 
+$( "a" ).click(function( event ) {
+  event.preventDefault();
+});
 
-// if a user clicks read more on the primary column, have text in the <p> tag slide down along with a "read less" link in the blog post using $.slideDown() and $.show(), hide the "read more" link using $.hide()
-
-// finally got this to work! don't touch this.
+// user can use "read more" and "read less" in the blog post
 
 $(document).ready(function(){
   $(".readmore").click(function(){
@@ -14,6 +16,8 @@ $(document).ready(function(){
     $(".readmore").show();
   });
 });
+
+// user can use the "learn more" on the sidebar
 
 $(document).ready(function(){
   $(".learnmore").click(function(){
