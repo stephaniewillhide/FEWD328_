@@ -1,0 +1,47 @@
+.hello {
+  border: 5px dotted red;
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  padding: 40px;
+  color: gray;
+  font-size: 25px;
+  margin-top: 150px;
+}
+
+@media (max-width: 480px) {
+  .hello {
+    width: 200px;
+    border: 5px dotted blue;
+  }
+}
+
+div {
+  border: 5px solid black;
+  width: 400px;
+}
+
+.large-box{
+  width: 700px;
+  height: 85px;
+}
+
+.med-box {
+  display: flex;
+  width: 700px;
+}
+
+section {
+  display: flex;
+  width: 700px;
+}
+
+.small-box {
+  margin: 10px;
+  height: 85px;
+}
+
+.sub-med-box {
+  margin: 10px;
+  height: 85px;
+}
