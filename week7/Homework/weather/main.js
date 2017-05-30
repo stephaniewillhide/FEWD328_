@@ -1,41 +1,30 @@
-// text box - cityName
+// Don't load javascript until the page has loaded
 
-// submit button
+$(document).ready(function() {
 
-// create a submit listener using jquery
+// for the id weather-form, upon hitting submit, perform this function
 
-// Get the city name from the form and storage in a variable
+    $('#weather-form').on('submit', function(e) {
+        e.preventDefault();
 
-// In the submit listener, retrieve the data with AJAX. the data is at this url:
+// on the form that was just submitted, (this), take the value from the id input
 
-// 1. http://api.openweathermap.org/data/2.5/weather?q=<CITYNAME>
+        var city = $(this).find('#input').val();
 
-// 2. Print out that data using console.log() and append it as a list to your html
+        $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=ed136b54c46892c2f08167afd8eae8a3', 
+            function(object) {
 
-// http://api.openweathermap.org/data/2.5/weather?q=harlem&appid=ed136b54c46892c2f08167afd8eae8a3
+                $('h3').append("The temperature in " + object.name + " is currently " + convertToFahrenheit(object.main.temp) + " and the current weather is " + object.weather["0"].description + ".")
+                
+            } 
+        )
 
+    })
 
-  // var url = 'http://api.openweathermap.org/data/2.5/weather?zip=45140,us&appid=ed136b54c46892c2f08167afd8eae8a3';
+}) 
 
+function convertToFahrenheit(kelvinTemp) {
+    // T(°F) = T(K) × 9/5 - 459.67
+    return Math.round(kelvinTemp * (9/5) - 459.67)
+}
 
-$(function (){
-
-  $('#test').submit(function(){
-    var city = $(this).find('#input').val();
-
-    $.get('http://api.openweathermap.org/data/2.5/weather?q=cincinnati&appid=ed136b54c46892c2f08167afd8eae8a3')
-    //var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=ed136b54c46892c2f08167afd8eae8a3';
-    //$.ajax({
-    //  dataType: 'json',
-    //  url: 'http://api.openweathermap.org/data/2.5/weather?q=cincinnati&appid=ed136b54c46892c2f08167afd8eae8a3',
-    //  success: function(json) {
-    //    console.log(json.weather);
-    //    $('.response').text(JSON.stringify(json));
-    //  },
-    //  error: function(e){
-    //    console.log(e.message);
-    //  }
-    //})
-  })
-
-})
